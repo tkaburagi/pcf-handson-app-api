@@ -1,0 +1,13 @@
+applications:
+- name: api-tkaburagi
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git#v4.16
+  path: target/demo-0.0.1-SNAPSHOT.jar
+  memory: 1g
+  routes:
+  - route: api-tkaburagi.apps.internal
+  - route: api-tkaburagi.apps.pcf.pcflab.jp
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.0.+}}'
+  services:
+    - pcc
+    - mysql
