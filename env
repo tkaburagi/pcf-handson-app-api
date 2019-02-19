@@ -1,0 +1,158 @@
+Getting env variables for app api-tkaburagi in org handson-student-1 / space development as student-1...
+OK
+
+System-Provided:
+{
+ "VCAP_SERVICES": {
+  "app-autoscaler": [
+   {
+    "binding_name": null,
+    "credentials": {},
+    "instance_name": "autoscale-development",
+    "label": "app-autoscaler",
+    "name": "autoscale-development",
+    "plan": "standard",
+    "provider": null,
+    "syslog_drain_url": null,
+    "tags": [
+     "cfapi",
+     "runtime",
+     "autoscaling"
+    ],
+    "volume_mounts": []
+   }
+  ],
+  "credhub": [
+   {
+    "binding_name": null,
+    "credentials": {
+     "credhub-ref": "/credhub-service-broker/credhub/da4337e3-2f79-458b-a6d2-d9da4bd38334/credentials"
+    },
+    "instance_name": "pcc-cred",
+    "label": "credhub",
+    "name": "pcc-cred",
+    "plan": "default",
+    "provider": null,
+    "syslog_drain_url": null,
+    "tags": [
+     "credhub"
+    ],
+    "volume_mounts": []
+   }
+  ],
+  "p-cloudcache": [
+   {
+    "binding_name": null,
+    "credentials": {
+     "distributed_system_id": "0",
+     "locators": [
+      "10.0.8.4[55221]"
+     ],
+     "urls": {
+      "gfsh": "https://cloudcache-2461d7b8-8bbb-4423-809d-cb0672c3d05a.sys.pcf.pcflab.jp/gemfire/v1",
+      "pulse": "https://cloudcache-2461d7b8-8bbb-4423-809d-cb0672c3d05a.sys.pcf.pcflab.jp/pulse"
+     },
+     "users": [
+      {
+       "password": "grj3TCE2kRpC0aeF9v8ZQ",
+       "roles": [
+        "developer"
+       ],
+       "username": "developer_LE6TSPKe877pJmx346X4vQ"
+      },
+      {
+       "password": "PWAo44DMOuSTb8Kwq43TAw",
+       "roles": [
+        "cluster_operator"
+       ],
+       "username": "cluster_operator_Llwwy6ZPlxjl6nnciM8bQ"
+      }
+     ],
+     "wan": {
+      "sender_credentials": {
+       "active": {
+        "password": "B9pQ1qkRnX1TC2lufPOUMQ",
+        "username": "gateway_sender_tUkUAq9WpPQxFWaVTMAww"
+       }
+      }
+     }
+    },
+    "instance_name": "pcc",
+    "label": "p-cloudcache",
+    "name": "pcc",
+    "plan": "dev-plan",
+    "provider": null,
+    "syslog_drain_url": null,
+    "tags": [
+     "gemfire",
+     "cloudcache",
+     "database",
+     "pivotal",
+     "session-replication"
+    ],
+    "volume_mounts": []
+   }
+  ],
+  "p.mysql": [
+   {
+    "binding_name": null,
+    "credentials": {
+     "hostname": "q-n3s3y1.q-g2493.bosh",
+     "jdbcUrl": "jdbc:mysql://q-n3s3y1.q-g2493.bosh:3306/service_instance_db?user=32f607cfc9b64e79a99ea505463a594a\u0026password=btfcnc37w8bkf2d3\u0026useSSL=false",
+     "name": "service_instance_db",
+     "password": "btfcnc37w8bkf2d3",
+     "port": 3306,
+     "uri": "mysql://32f607cfc9b64e79a99ea505463a594a:btfcnc37w8bkf2d3@q-n3s3y1.q-g2493.bosh:3306/service_instance_db?reconnect=true",
+     "username": "32f607cfc9b64e79a99ea505463a594a"
+    },
+    "instance_name": "mysql",
+    "label": "p.mysql",
+    "name": "mysql",
+    "plan": "db-small",
+    "provider": null,
+    "syslog_drain_url": null,
+    "tags": [
+     "mysql"
+    ],
+    "volume_mounts": []
+   }
+  ]
+ }
+}
+
+{
+ "VCAP_APPLICATION": {
+  "application_id": "392fe5f2-f91b-4981-9b31-afd5fb50847a",
+  "application_name": "api-tkaburagi",
+  "application_uris": [
+   "api-tkaburagi.apps.pcf.pcflab.jp",
+   "api-tkaburagi.apps.internal"
+  ],
+  "application_version": "3b408303-536b-4497-af51-8202a95f6369",
+  "cf_api": "https://api.sys.pcf.pcflab.jp",
+  "limits": {
+   "disk": 1024,
+   "fds": 16384,
+   "mem": 1024
+  },
+  "name": "api-tkaburagi",
+  "space_id": "f56f0689-5db0-4120-83b6-39c59bdac407",
+  "space_name": "development",
+  "uris": [
+   "api-tkaburagi.apps.pcf.pcflab.jp",
+   "api-tkaburagi.apps.internal"
+  ],
+  "users": null,
+  "version": "3b408303-536b-4497-af51-8202a95f6369"
+ }
+}
+
+User-Provided:
+JBP_CONFIG_OPEN_JDK_JRE: { jre: { version: 11.0.+}}
+management.endpoint.shutdown.enabled: true
+management.endpoints.web.exposure.include: shutdown
+
+No running env variables have been set
+
+No staging env variables have been set
+

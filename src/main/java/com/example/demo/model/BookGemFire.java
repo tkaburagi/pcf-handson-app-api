@@ -1,12 +1,11 @@
 package com.example.demo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.gemfire.mapping.annotation.Region;
 
-@Entity
-@Table(name = "book")
-public class Book {
-    @javax.persistence.Id
+@Region(name = "book")
+public class BookGemFire {
+    @Id
     private String id;
     private String title;
     private String author_name;
