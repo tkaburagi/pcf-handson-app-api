@@ -171,7 +171,7 @@ jobs:
       CF_MANIFEST_HOST: {{cf-manifest-host-prod}}
   - put: cf-production
     params:
-      manifest: makemanifest/manifest-production.yml
+      manifest: makemanifest/manifest.yml
       current_app_name: api-tkaburagi
 
 - name: major
