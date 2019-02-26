@@ -64,7 +64,7 @@ if [ ! -f "$versionFile" ]; then
 fi
 cp $inputDir/api-tkaburagi-`cat ${versionFile}`.jar $outputDir/api-tkaburagi-`cat ${versionFile}`.jar
 
-outputManifest=$outputDir/manifest-production.yml
+outputManifest=$outputDir/manifest.yml
 
 cp $inputManifest $outputManifest
 
