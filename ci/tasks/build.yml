@@ -21,6 +21,6 @@ run:
     --input-dir, api-tkaburagi,
     --output-dir, build,
     --version-file, version/number,
-    --artifactId, demo,
+    --artifactId, apidemo,
     --packaging, jar
   ]

@@ -19,6 +19,7 @@ resources:
     driver: git
     uri: https://github.com/tkaburagi/pcfdemoapp-version
     branch: master
+    private_key: ((github-private-key))
     file: version
 
 - name: candidate-release
