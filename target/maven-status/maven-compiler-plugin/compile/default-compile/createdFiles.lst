@@ -1,0 +1,9 @@
+com/example/demo/DemoApplication.class
+com/example/demo/controller/ApiController.class
+com/example/demo/repo/jpa/BookJpaRepository.class
+com/example/demo/model/Book.class
+com/example/demo/model/BookGemFire.class
+com/example/demo/service/BookService.class
+com/example/demo/config/PccConfig.class
+com/example/demo/config/DbCloudConfig.class
+com/example/demo/repo/gem/BookGemFireRepository.class

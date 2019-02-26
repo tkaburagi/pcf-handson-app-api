@@ -30,4 +30,4 @@ set -e
 rm -rf ~/.m2
 ln -fs $(pwd)/m2 ~/.m2
 
-./mvnw clean package -DskipTests=true
+#./mvnw clean test
