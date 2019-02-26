@@ -1,0 +1,26 @@
+---
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: java
+
+inputs:
+- name: api-tkaburagi
+- name: version
+
+caches:
+- path: api-tkaburagi/m2
+
+outputs:
+- name: build
+
+run:
+  path: api-tkaburagi/ci/tasks/build.sh
+  args: [
+    --input-dir, api-tkaburagi,
+    --output-dir, build,
+    --version-file, version/number,
+    --artifactId, demo,
+    --packaging, jar
+  ]

@@ -1,0 +1,27 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: java
+    tag: '8'
+
+inputs:
+- name: api-tkaburagi
+- name: final-release
+- name: version
+
+outputs:
+- name: makemanifest
+
+run:
+  path: api-tkaburagi/ci/tasks/make-manifest.sh
+  args: [
+    --input-dir, final-release,
+    --output-dir, makemanifest,
+    --input-manifest, api-tkaburagi/manifest-production.yml,
+    --artifactId, demo,
+    --packaging, jar,
+    --version-file, version/number
+  ]

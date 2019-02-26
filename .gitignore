@@ -1,5 +1,6 @@
 /target/
 !.mvn/wrapper/maven-wrapper.jar
+/ci/param.yml
 
 ### STS ###
 .apt_generated

@@ -1,0 +1,19 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: java
+
+inputs:
+- name: api-tkaburagi
+
+caches:
+- path: api-tkaburagi/m2
+
+run:
+  path: api-tkaburagi/ci/tasks/unit.sh
+  args: [
+    --input-dir, api-tkaburagi
+  ]
