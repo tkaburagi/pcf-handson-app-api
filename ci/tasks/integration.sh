@@ -29,4 +29,4 @@ cd $inputDir
 set -e
 rm -rf ~/.m2
 ln -fs $(pwd)/m2 ~/.m2
-./mvnw clean verify
+#./mvnw clean verify
