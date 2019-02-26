@@ -77,7 +77,7 @@ jobs:
   - put: candidate-release
     params: { file: build/demo-*.jar }
   - put: version
-    params: { file: version/number }
+    params: { file: version }
 
 - name: integration-test
   serial: true
@@ -151,7 +151,7 @@ jobs:
   - put: final-release
     params: { file: prepare-final/api-tkaburagi-*.jar }
   - put: version
-    params: { file: version/number }
+    params: { file: version }
 
 - name: promotion
   serial: true
