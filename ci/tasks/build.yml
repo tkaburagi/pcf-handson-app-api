@@ -20,7 +20,7 @@ run:
   args: [
     --input-dir, api-tkaburagi,
     --output-dir, build,
-    --version-file, version,
+    --version-file, version/number,
     --artifactId, demo,
     --packaging, jar
   ]
