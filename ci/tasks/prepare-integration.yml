@@ -4,8 +4,7 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: java
-    tag: '8'
+    repository: adoptopenjdk/openjdk11
 
 inputs:
 - name: api-tkaburagi
@@ -21,7 +20,7 @@ run:
     --input-dir, candidate-release,
     --output-dir, prepare-integration,
     --version-file, version/number,
-    --input-manifest, api-tkaburagi/manifest-staging.yml,
+    --input-manifest, api-tkaburagi/manifest-development.yml,
     --artifactId, demo,
     --packaging, jar
   ]

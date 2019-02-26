@@ -17,7 +17,7 @@ resources:
   type: semver
   source:
     driver: git
-    uri: https://github.com/tkaburagi/pcfdemoapp-version
+    uri: git@github.com:tkaburagi/pcfdemoapp-version.git
     branch: master
     private_key: ((github-private-key))
     file: version
@@ -26,7 +26,7 @@ resources:
   type: google-cloud-storage
   source:
     bucket: {{gcs-bucket-release-candidates}}
-    regexp: demo-(.*).jar
+    regexp: apidemo-(.*).jar
     json_key: {{gcs-key}}
 
 - name: final-release
@@ -76,7 +76,7 @@ jobs:
   - task: build
     file: api-tkaburagi/ci/tasks/build.yml
   - put: candidate-release
-    params: { file: build/demo-*.jar }
+    params: { file: build/apidemo-*.jar }
   - put: version
     params: { file: version/number }
 
@@ -96,7 +96,7 @@ jobs:
       CF_MANIFEST_HOST: {{cf-manifest-host-staging}}
   - put: cf-staging
     params:
-      manifest: prepare-integration/manifest-staging.yml
+      manifest: prepare-integration/manifest-development.yml
   - task: integration
     file: api-tkaburagi/ci/tasks/integration.yml
 
