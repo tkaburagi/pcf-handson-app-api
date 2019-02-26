@@ -61,7 +61,7 @@ set -e
 rm -rf ~/.m2
 ln -fs $(pwd)/m2 ~/.m2
 
-./mvnw clean package -Pci -DskipTests=true
+./mvnw clean package -Pci -DversionNumber=$version -DskipTests=true
 
 ls -ltr target
 
