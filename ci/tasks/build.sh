@@ -67,7 +67,7 @@ ls
 
 ls -ltr target
 
-mv target/demo-1.0.0-SNAPSHOT.jar target/$artifactName
+mv target/demo-0.0.1-SNAPSHOT.jar target/$artifactName
 
 # Copy war file to concourse output folder
 cd ..
