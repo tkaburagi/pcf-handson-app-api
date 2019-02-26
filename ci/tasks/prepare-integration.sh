@@ -82,7 +82,7 @@ fi
 cp $inputArtifact $outputArtifact
 
 # copy the manifest to the output directory and process it
-outputManifest=$outputDir/manifest-staging.yml
+outputManifest=$outputDir/manifest-development.yml
 
 cp $inputManifest $outputManifest
 
