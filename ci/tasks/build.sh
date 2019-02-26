@@ -63,7 +63,7 @@ ln -fs $(pwd)/m2 ~/.m2
 
 ls -ltr
 
-./mvnw clean package -DversionNumber=$version -DskipTests=true
+./mvnw package -DversionNumber=$version -DskipTests=true
 
 ls -ltr target
 
