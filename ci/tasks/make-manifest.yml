@@ -20,8 +20,8 @@ run:
   args: [
     --input-dir, final-release,
     --output-dir, makemanifest,
-    --input-manifest, api-tkaburagi/manifest-production.yml,
-    --artifactId, demo,
+    --input-manifest, api-tkaburagi/manifest.yml,
+    --artifactId, apidemo,
     --packaging, jar,
     --version-file, version/number
   ]

@@ -21,6 +21,6 @@ run:
     --output-dir, prepare-integration,
     --version-file, version/number,
     --input-manifest, api-tkaburagi/manifest-development.yml,
-    --artifactId, demo,
+    --artifactId, apidemo,
     --packaging, jar
   ]
