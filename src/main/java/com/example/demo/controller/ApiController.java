@@ -39,7 +39,7 @@ public class ApiController {
 
         log.info("Handling home");      
         Map<String, Object> body = new LinkedHashMap<>();
-        body.put("message","Helloworld V3!!!!");
+        body.put("message","Helloworld V4");
         body.put("index", System.getenv("CF_INSTANCE_INDEX"));
         body.put("host", System.getenv("CF_INSTANCE_IP"));
         body.put("java", System.getProperty("java.vm.version"));
